@@ -1,5 +1,5 @@
 # weekday
-A little quiz to train memorizing day-of-the-week formulas for a given year, coded with aurelia.io
+A little quiz to train memorizing day-of-the-week formulas for a given year, coded with [aurelia.io](http://aurelia.io)
 
 # Calculation
 The calculation follows the explanation in the book *Secrets of Mental Math*, by *Arthur Benjamin* ([amazon](http://a.co/bW8Ireu)).
@@ -58,3 +58,7 @@ date=1
 
 # How to use the quiz
 Press "offsets" to first memorize the offsets for the different months. Once they are engraved in your memory, press "quiz" to test your knowledge with a random date in each month.
+
+# Credits
+* The book *Secrets of Mental Math*, by *Arthur Benjamin* ([amazon](http://a.co/bW8Ireu)).
+* Mary Lou of [codrops](https://tympanus.net/codrops/), in particular [this article](https://tympanus.net/codrops/2015/10/28/effect-ideas-for-card-stacks/)) for inspiration on the css animations and color scheme.
