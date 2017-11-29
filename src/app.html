@@ -1,0 +1,25 @@
+<template>
+  <require from="style.css"></require>
+  <div class="test-type-container">
+    <a href="#" class="test-type offsets ${testType === 'offsets' ? 'active' : ''}" click.trigger="initTest('offsets')">offsets</a>
+    <a href="#" class="test-type quiz ${testType === 'quiz' ? 'active' : ''}" click.trigger="initTest('quiz')">quiz</a>
+  </div>
+  <h1>${year}</h1>
+  <h3>What weekday is...</h3>
+
+  <div class="questions">
+    <div repeat.for="question of questions"
+         class="question ${question.answerEvaluation}"
+         css=" z-index: ${(12 - question.month)};">
+      <div class="description">${question.description}</div>
+      <div class="answers-container">
+        <a href="#" repeat.for="i of 7" click.trigger="evaluateAnswer(question, i)">${testType === 'quiz' ? weekdayByIdx((i + 6)%7) : i} </a>
+      </div>
+    </div>
+    <div class="finished">
+      <div class="description">The End</div>
+      <div class="evaluation">You answered ${answered.correct} questions correctly out of ${questions.length}.</div>
+    </div>
+  </div>
+
+</template>

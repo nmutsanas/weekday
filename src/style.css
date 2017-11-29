@@ -1,0 +1,210 @@
+/* latin */
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v10/J0GYVYTizO1mjpT3aOcSbQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arvo Bold'), local('Arvo-Bold'), url(https://fonts.gstatic.com/s/arvo/v10/Ya11CJGBCnKoJHvb8B2EOw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body {
+  font-family: 'Arvo', serif;
+  font-weight: 400;
+  background: #565f77;
+  color: #c5c9e6;
+  overflow: hidden;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+.test-type-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+a.test-type {
+  display: inline-block;
+  background: #c5c9e6;
+  color: #565f77;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.test-type.offsets {
+  border-radius: 10px 0 0 10px;
+}
+
+.test-type.quiz {
+  border-radius: 0 10px 10px 0;
+}
+
+.questions {
+  color: #b22b24;
+  height: 60vh;
+  width: 60vw;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+.question {
+  background: #fff59d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.question.bad {
+  position: absolute;
+  top: 100vh;
+  opacity: 0;
+  transform: rotate(30deg);
+  transition: 0.5s ease;
+}
+
+.question.good {
+  position: absolute;
+  top: -100vh;
+  opacity: 0;
+  transform: rotate(-30deg);
+  transition: 0.5s ease;
+}
+
+.description {
+  font-size: 30pt;
+  font-weight: 700;
+  text-align: center;
+  height: 40vh;
+  line-height: 40vh;
+}
+
+.finished {
+  background: #c5c9e6;
+  position: absolute;
+  font-size: 18pt;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.answers-container {
+  margin: auto;
+  display: flex;
+}
+
+.answers-container a {
+  background: #c5c9e6;
+  font-weight: 700;
+  color: #b22b24;
+  text-decoration: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 7vw;
+  width: 7vw;
+  line-height: 7vw;
+  margin: 1vw;
+  text-align: center;
+  border-radius: 10px;
+}
+
+a:hover, a.active {
+  background: #b22b24;
+  color: #c5c9e6;
+}
+
+.evaluation {
+  width: 100%;
+  text-align: center;
+}
+
+/* yellow fade effects */
+@keyframes goodfade {
+  from {
+    background: #006400;
+    color: #ffffff;
+  }
+  to {
+    background: #565f77;
+    color: #c5c9e6;
+  }
+}
+
+@keyframes goodfade2 {
+  from {
+    background: #006400;
+    color: #ffffff;
+  }
+  to {
+    background: #565f77;
+    color: #c5c9e6;
+  }
+}
+
+@keyframes badfade {
+  from {
+    background: #b22b24;
+    color: #c5c9e6;
+  }
+  to {
+    background: #565f77;
+    color: #c5c9e6;
+  }
+}
+
+@keyframes badfade2 {
+  from {
+    background: #b22b24;
+    color: #c5c9e6;
+  }
+  to {
+    background: #565f77;
+    color: #c5c9e6;
+  }
+}
+
+.goodfade {
+  animation-name: goodfade;
+  animation-duration: 1.5s;
+}
+
+.badfade {
+  animation-name: badfade;
+  animation-duration: 1.5s;
+}
+
+/*
+ workaround to be able to highlight repeatedly (alternates between two classes)
+ TODO: figure out a clean way to do this
+   */
+.goodfade2 {
+  animation-name: goodfade2;
+  animation-duration: 1.5s;
+}
+
+.badfade2 {
+  animation-name: badfade2;
+  animation-duration: 1.5s;
+}
