@@ -1,5 +1,6 @@
-# weekday
-A little quiz to train memorizing day-of-the-week formulas for a given year, coded with [aurelia.io](http://aurelia.io)
+# weekday [demo](https://nmutsanas.github.io/weekday/)
+
+A little quiz to train memorizing day-of-the-week formulas for a given year, coded with [aurelia.io](http://aurelia.io). With a bit of practice you will be able to figure out the day of the week for a given date without the help of a calendar.
 
 # Calculation
 The calculation follows the explanation in the book *Secrets of Mental Math*, by *Arthur Benjamin* ([amazon](http://a.co/bW8Ireu)).
@@ -15,7 +16,9 @@ yearCode = (floor(x/4) + x) mod 7
 For example, for the year 2018, the yearCode is
 ```
 (floor(18/4) + 18) mod 7 
+  = (floor(4.5) + 18) mod 7
   = (4 + 18) mod 7 
+  = 22 mod 7
   = 1
 ```
 
@@ -42,23 +45,23 @@ This needs to be memorized (and that's what this quiz is all about), from the fo
 The result will be a number between 0 and 6 and is to be interpreted as `0=Sunday, 1=Monday, 2=Tuesday,...`
 
 ## Example
-**1 January 2018**
+**January 10th, 2018**
 ```
 yearCode=1
 monthCode=6
-date=1
+date=10
 ```
 
 ```
 (yearCode + monthCode + date) mod 7 
-  = (1 + 6 + 1) mod 7 
-  = 1 
-  (i.e. Monday)
+  = (1 + 6 + 10) mod 7 
+  = 3 
+  (i.e. Wednesday)
 ```
 
 # How to use the quiz
 Press "offsets" to first memorize the offsets for the different months. Once they are engraved in your memory, press "quiz" to test your knowledge with a random date in each month.
 
 # Credits
-* The book *Secrets of Mental Math*, by *Arthur Benjamin* ([amazon](http://a.co/bW8Ireu)).
-* Mary Lou of [codrops](https://tympanus.net/codrops/), in particular [this article](https://tympanus.net/codrops/2015/10/28/effect-ideas-for-card-stacks/)) for inspiration on the css animations and color scheme.
+* The book *Secrets of Mental Math*, by *Arthur Benjamin* ([amazon](http://a.co/bW8Ireu)) for the method.
+* Mary Lou of [codrops](https://tympanus.net/codrops/) and in particular [this article](https://tympanus.net/codrops/2015/10/28/effect-ideas-for-card-stacks/) for inspiration on the css animations and color scheme.
